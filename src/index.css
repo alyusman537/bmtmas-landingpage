@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-page: #f9f9f9;
+  --bg-card: #ffffff;
+  --bg-splash: #ffffff;
+  --overlay: rgba(255, 255, 255, 0.9);
+  --overlay-arrow: rgba(255, 255, 255, 0.9);
+  --kop-blue: #356296;
+  --kop-green: #00a860;
+  --kop-blue-hover: #2a4e78;
+  --kop-green-hover: #008f51;
+  --kop-gold: #c9a84c;
+  --kop-gold-light: #f5d98a;
+  --kop-green-dark: #1a5c3a;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-tertiary: #6b7280;
+  --text-muted: #9ca3af;
+  --text-on-dark: #e5e7eb;
+  --border-light: #f3f4f6;
+  --border-medium: #e5e7eb;
+  --bg-muted: #f3f4f6;
+  --bg-placeholder: #e5e7eb;
+  --bg-inactive: #d1d5db;
+  --color-white: #ffffff;
+}
+
+.dark {
+  --bg-page: #0f172a;
+  --bg-card: #1e293b;
+  --bg-splash: #0f172a;
+  --overlay: rgba(15, 23, 42, 0.9);
+  --overlay-arrow: rgba(30, 41, 59, 0.9);
+  --kop-blue: #60a5fa;
+  --kop-green: #34d399;
+  --kop-blue-hover: #3b82f6;
+  --kop-green-hover: #10b981;
+  --kop-gold: #f5d98a;
+  --kop-gold-light: #fde68a;
+  --kop-green-dark: #34d399;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #94a3b8;
+  --text-muted: #64748b;
+  --text-on-dark: #475569;
+  --border-light: #1e293b;
+  --border-medium: #334155;
+  --bg-muted: #1e293b;
+  --bg-placeholder: #334155;
+  --bg-inactive: #475569;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes pulseGold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.4); }
+  50% { box-shadow: 0 0 20px 4px rgba(201, 168, 76, 0.15); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.45s ease-out both;
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse-gold {
+  animation: pulseGold 2.5s ease-in-out infinite;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out both;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out both;
+}
+
+body {
+  margin: 0;
+}
