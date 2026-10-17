@@ -493,7 +493,7 @@ export default function LandingClient({
             </p>
           </div>
           <Link
-            href="/berita/3"
+            href={"/berita/"+beritaData.length}
             className="text-sm font-semibold text-[var(--kop-blue)] hover:text-[#2a4e78] flex items-center gap-1 group transition-colors"
           >
             Lihat Semua Berita
