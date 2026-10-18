@@ -1,6 +1,8 @@
 import pool from '@/lib/db';
 import LandingClient from './LandingClient';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: 'BMT Maslahah - Syariah Menjadikan Berkah',
   description: 'Koperasi syariah yang amanah dan profesional dalam mengelola keuangan untuk meningkatkan kesejahteraan anggota dan masyarakat.',

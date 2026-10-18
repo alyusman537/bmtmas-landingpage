@@ -1,6 +1,8 @@
 import pool from '@/lib/db';
 import GaleriClient from './GaleriClient';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: 'Galeri - BMT Maslahah',
 };

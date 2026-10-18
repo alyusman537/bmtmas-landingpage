@@ -2,6 +2,8 @@ import pool from '@/lib/db';
 import { notFound } from 'next/navigation';
 import DetailBeritaClient from './DetailBeritaClient';
 
+export const dynamic = 'force-dynamic';
+
 async function getBeritaById(id) {
   const [rows] = await pool.query('SELECT * FROM berita WHERE id = ?', [id]);
   if (rows.length === 0) return null;
