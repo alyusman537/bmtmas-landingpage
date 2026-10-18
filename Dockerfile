@@ -1,5 +1,6 @@
 # ─── Stage 1: Build ──────────────────────────────────────────
-FROM node:22-slim AS builder
+#FROM node:22-slim AS builder
+FROM node:20-alpine AS builder
 WORKDIR /app
 COPY package*.json ./
 RUN npm install -g npm@10 && npm ci --ignore-scripts --no-audit --no-fund --prefer-offline && npm rebuild bcrypt sharp
@@ -7,7 +8,8 @@ COPY . .
 RUN npm run build
 
 # ─── Stage 2: Production ─────────────────────────────────────
-FROM node:22-slim
+# FROM node:22-slim
+FROM node:20-alpine
 WORKDIR /app
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
